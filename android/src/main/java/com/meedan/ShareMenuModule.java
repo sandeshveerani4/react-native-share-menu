@@ -99,7 +99,7 @@ public class ShareMenuModule extends ReactContextBaseJavaModule implements Activ
     }
 
     // If this isn't the root activity then make sure it is
-    if (!currentActivity.isTaskRoot()) {
+    /* if (!currentActivity.isTaskRoot()) {
       Intent newIntent = new Intent(currentActivity.getIntent());
       newIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
       currentActivity.startActivity(newIntent);
@@ -109,7 +109,7 @@ public class ShareMenuModule extends ReactContextBaseJavaModule implements Activ
       clearSharedText();
       currentActivity.finish();
       return;
-    }
+    } */
 
     Intent intent = currentActivity.getIntent();
     
