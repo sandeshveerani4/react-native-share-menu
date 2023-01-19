@@ -79,6 +79,12 @@ public class ShareMenuModule extends ReactContextBaseJavaModule implements Activ
         data.putArray(DATA_KEY, uriArr);
         return data;
       }
+    } else if (Intent.ACTION_PROCESS_TEXT.equals(action)){
+      CharSequence text = intent.getCharSequenceExtra(Intent.EXTRA_PROCESS_TEXT);
+      if (text != null) {
+        data.putString(DATA_KEY, text.toString());
+        return data;
+      }
     }
 
     return null;
